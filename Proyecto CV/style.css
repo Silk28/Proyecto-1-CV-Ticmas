@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d4e2e6;
+    min-height: 100vh;
+}
+
+.contenedor {
+    position: relative;
+    margin: 50px;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 2px 2px 5px #8080ff;
+}
+
+.sector-izquierdo {
+    position: relative;
+    background-color: #002db3;
+    padding: 40px;
+    color: #ffffff;
+}
+
+
+.perfil {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid;
+}
+
+.perfil .foto {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    box-shadow: 0px 0px 15px #ffffff;
+}
+
+.perfil .foto img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    
+}
+
+ .perfil h2 {
+    margin-top: 20px;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    font-weight: 600px;
+    line-height: 1.4em;
+    text-align: center;
+}
+
+.perfil h2 span {
+    font-size: 0.6em;
+    font-weight: 300px;
+}
+
+.info-personal {
+    padding-top: 10px;
+}
+
+.titulo {
+    text-transform: uppercase;
+    margin: 20px 0px;
+    font-size: 1.2em;
+    
+}
+
+.info-personal .texto {
+    font-size: 0.8em;
+}
+
+.info-personal ul {
+    position: relative;
+}
+
+
+.info-personal ul li {
+    list-style: none;
+    position: relative;
+    margin: 10px 0;
+}
+
+.info-personal ul li .icono {
+   display: inline-block;
+   width: 30px;
+   font-size: 18px;
+}
+.info-personal ul li span {
+    font-weight: 300;
+}
+
+
+.info-personal .porcentaje {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    display: block;
+    margin-top: 5px;
+    background-color: #28334a;
+    border-radius: 5px;
+}
+.info-personal .porcentaje div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #f7f7f9;
+    border-radius: 5px
+}
+
+
+
+/*Sector Derecho*/
+
+.sector-derecho {
+    position: relative;
+    background-color: #ffffff;
+    padding: 40px;
+}
+
+.info-laboral {
+    margin-bottom: 50px;
+}
+
+
+.info-laboral p {
+    font-size: 0.8em;
+}
+
+.titulo2 i {
+    font-size: 20px;
+    margin: 0px 8px;
+}
+.titulo2 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #002db3;
+    
+}
+.info-laboral .caja {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+}
+
+.info-laboral .caja .anio-lugar {
+    min-width: 250px;
+    color: #73737e;
+}
+
+.info-laboral .caja .anio-lugar h5 {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.info-laboral .caja .texto h4 {
+    text-transform: uppercase;
+    font-size: 16px;
+    
+}
+
+ .info-laboral .social i{
+    display: inline-block;
+    width: 40px;
+    font-size: 30px;
+    margin: 5px 10px;
+    color: #002db3;
+    
+ }
+ 
+ .info-laboral .social i:hover {
+    transform: scale(1.2);
+    
+}
+ .impresora {
+    position: relative;
+    width: 50px;
+    left: 85%;
+    color: gray;
+ }
+ .impresora i {
+    font-size: 40px;
+ }
+ .impresora i:hover {
+    transform: scale(1.2);
+
+ }
+
+
+
+@media (max-width: 1000px) {
+
+    .contenedor {
+      margin: 10px;
+      grid-template-columns: repeat(1, 1fr);
+    
+     }
+
+}
+@media (max-width: 600px) {
+    .info-laboral .caja {
+        flex-direction: column;
+    }
+    .info-laboral .caja .anio-lugar {
+        
+        margin-bottom: 5px;
+    }
+}
+
+ 
+@media print {
+    .contenedor { 
+        margin: 0;
+        padding: 0;
+        grid-template-columns: 1fr 2fr;
+        
+    }
+    .sector-izquierdo { 
+        color: #000206;
+        background-color: #ffffff;
+    }
+    .perfil h2 {
+        color: #002db3;
+    }
+
+    .titulo {
+        color: #002db3;
+    }
+    .info-personal .porcentaje {
+        background-color: lightgray;
+    }
+    .info-personal .porcentaje div {
+        background-color: #000206;
+    }
+    .sector-derecho {
+        padding: 10px;
+       
+    }
+   
+    .info-laboral .caja {
+       
+        margin: 10px 0;
+    }
+    .info-laboral .titulo2 {
+        margin-top: 10px;
+        
+    }
+    .info-laboral .social i {
+        display: none;
+        color: #000000;
+    }
+    .social a {
+        display: block;
+        color: #000000;
+        text-decoration: none;
+        font-size: 0.8em;
+    }
+   
+    .social a[href]::after {
+        content:attr(href);
+    }
+    #print {
+        display: none;
+
+    }
+}
+
+@page {
+    margin: 5px;
+}
